@@ -3,4 +3,4 @@
 LADIER--LE MAUX Charles
 WASTEELS Louka
 
-Quiz Pokémon avec Symfony
+Quiz Pokémon avec Symfony.
