@@ -21,7 +21,7 @@ class User
     private ?int $nbVictoires = null;
 
     #[ORM\Column]
-    private ?int $yes = null;
+    private ?int $nbDefaites = null;
 
     public function getId(): ?int
     {
@@ -52,14 +52,14 @@ class User
         return $this;
     }
 
-    public function getYes(): ?int
+    public function getnbDefaites(): ?int
     {
-        return $this->yes;
+        return $this->nbDefaites;
     }
 
-    public function setYes(int $yes): self
+    public function setnbDefaites(int $nbDefaites): self
     {
-        $this->yes = $yes;
+        $this->nbDefaites = $nbDefaites;
 
         return $this;
     }
