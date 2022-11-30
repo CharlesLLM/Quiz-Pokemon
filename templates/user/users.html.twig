@@ -9,23 +9,27 @@
 {% block body %}
     <h1>{{ 'Liste des utilisateurs'|upper }} ({{ users|length }})</h1>
     <table class='table table-bordered'>
-        <tr>
-            <th>Id</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Nombre de victoires</th>
-            <th>Nombre de défaites</th>
-            <th>Actions</th>
-        </tr>
-        {% for slug, user in users %}
+        <thead>
             <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.nom }}</td>
-                <td>{{ user.prenom }}</td>
-                <td>{{ user.nbVictoires }}</td>
-                <td>{{ user.nbDefaites }}</td>
-                <td><a href="{{ path('users', { slug: slug }) }}">Voir l'article</a></td>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Nombre de victoires</th>
+                <th>Nombre de défaites</th>
+                <th>Actions</th>
             </tr>
-        {% endfor %}
+        </thead>
+        <tbody>
+            {% for slug, user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.nom }}</td>
+                    <td>{{ user.prenom }}</td>
+                    <td>{{ user.nbVictoires }}</td>
+                    <td>{{ user.nbDefaites }}</td>
+                    <td><a href="{{ path('users', { slug: slug }) }}">Voir l'article</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
     </table>
 {% endblock %}
