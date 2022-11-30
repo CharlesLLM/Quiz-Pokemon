@@ -24,10 +24,11 @@ final class UserController extends AbstractController
     //     ]);
     // }
 
-    #[Route('/user/{id}', name: 'app_user_show', methods: ['GET'])]
-    public function show(User $user): Response
+    #[Route('/user/{id}', name: 'user_show')]
+    public function showUser(User $user): Response
     {
         $nom_complet = $user->getPrenom()." ".$user->getNom();
+
         return $this->render('user/index.html.twig', [
             'nom' => $nom_complet,
         ]);
