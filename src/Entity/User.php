@@ -14,8 +14,11 @@ class User
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable: true)]
     private ?string $nom = null;
+    
+    #[ORM\Column(length: 50)]
+    private ?string $prenom = null;
 
     #[ORM\Column]
     private ?int $nbVictoires = null;
@@ -36,6 +39,18 @@ class User
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
 
         return $this;
     }
