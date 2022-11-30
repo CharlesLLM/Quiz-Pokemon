@@ -14,6 +14,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 final class UserController extends AbstractController
 {
+    // Liste des utilisateurs
     #[Route(path: "/users", name: "users")]
     public function users(UserRepository $userRepository): Response
     {
@@ -24,6 +25,7 @@ final class UserController extends AbstractController
         ]);
     }
 
+    // Page d'accueil pour un utilisateur précis
     #[Route(path: '/user/{id}', name: 'user')]
     public function showUser(User $user): Response
     {
