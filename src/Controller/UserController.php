@@ -14,17 +14,17 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 final class UserController extends AbstractController
 {
-    // #[Route(path: "/articles", name: "articles")]
-    // public function articles(UserRepository $userRepository , int $id): Response
-    // {
-    //     $user =  $userRepository->findBy(['id' => 1]);
+    #[Route(path: "/users", name: "users")]
+    public function users(UserRepository $userRepository): Response
+    {
+        $liste_users =  $userRepository->findAll();
 
-    //     return $this->render('user/index.html.twig', [
-    //         'user' => $user,
-    //     ]);
-    // }
+        return $this->render('user/users.html.twig', [
+            'users' => $liste_users,
+        ]);
+    }
 
-    #[Route('/user/{id}', name: 'user_show')]
+    #[Route(path: '/user/{id}', name: 'user')]
     public function showUser(User $user): Response
     {
         $nom_complet = $user->getPrenom()." ".$user->getNom();
