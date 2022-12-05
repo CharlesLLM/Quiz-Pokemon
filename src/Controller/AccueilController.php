@@ -8,12 +8,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class ConnexionController extends AbstractController
+final class AccueilController extends AbstractController
 {
-    #[Route(path: "/login", name: "connection")]
-    public function login(Request $request): Response
+    #[Route(path: "/accueil", name: "Accueil")]
+    public function Accueil(Request $request): Response
     {
-        return $this->render('connection/connection.html.twig', [
+        return $this->render('accueil/accueil.html.twig', [
             'name' => 'Charles',
         ]);
     }

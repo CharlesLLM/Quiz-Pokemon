@@ -7,5 +7,26 @@
 {% block title %} Connexion {% endblock %} {# Nom de la page #}
 
 {% block body %}
-    <h1>Connexion</h1>
+    <img class="logoPokemon" src="../assets/logo-poke.png">
+
+    {% block Form %}
+    <form id="formConnexion">
+        <div class="uti">
+            <label class="lblForm"><b>Nom d'utilisateur :</b></label><br>
+            <input class="inputForm" placeholder="...">
+        </div>
+        <div class="mdp">
+            <label class="lblForm"><b>Mot de passe :</b></label><br>
+            <input class="inputForm" placeholder="...">
+        </div>
+        <div class="conn">
+            <a class="BtnConn" href="#">Connexion</a>
+        </div>
+    </form>
+    <div class="inscr">
+        <a>Pas encore de compte ?</a><br>
+        <a href="#">S'inscrire</a>
+    </div>
+
+    {% endblock %}
 {% endblock %}

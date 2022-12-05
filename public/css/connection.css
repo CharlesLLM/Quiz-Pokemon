@@ -1,0 +1,74 @@
+body{
+    background-image: url(../assets/fond-inscri.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+.logoPokemon{
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+#formConnexion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.504);
+    width: 400px;
+    height: 300px;
+    border: 5px solid black;
+    border-radius: 30px;
+    width: 30%;
+    margin: auto;
+}
+.inscr{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.lblForm{
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+}
+.inputForm{
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.426);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 15px;
+}
+.conn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.mdp{
+    margin-top: 20px;
+}
+.BtnConn{
+
+    background-color: rgba(255, 255, 255, 0.426);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    color: black;
+}
+.BtnConn:hover{
+    text-decoration: none;
+}

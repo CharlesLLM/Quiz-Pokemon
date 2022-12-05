@@ -1,0 +1,11 @@
+body{
+    background-image: url(../assets/rayqua.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+}
+.logoPokemon{
+
+}
